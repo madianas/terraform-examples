@@ -3,7 +3,7 @@ resource "ah_cloud_server" "example" {
   datacenter = "ams1"
   image      = "centos-7-x64"
   product    = "start-xs"
-  ssh_keys   = ["05:ef:62:37:52:e0:fb:0e:34:e8:e2:fc:4c:7b:ce:d7"]
+  ssh_keys   = var.ah_ssh_keys
 
   provisioner "remote-exec" {
     inline = ["sudo ls /"]
